@@ -15,6 +15,9 @@ public class AppInitializer {
         System.out.println(rohitha.steal());
         System.out.println(rohitha.planningLoan());
 
+        Mahinda ranil = context.getBean("ranilHora",Ranil.class);
+        System.out.println(ranil.planningLoan());
+
         context.close();
 
 
