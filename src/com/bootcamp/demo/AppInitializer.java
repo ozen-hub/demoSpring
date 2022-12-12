@@ -9,15 +9,15 @@ public class AppInitializer {
                 = new ClassPathXmlApplicationContext("ApplicationContext.xml");
         Mahinda namal = context.getBean("namalHora",Namal.class);
         System.out.println(namal.steal());
+        System.out.println(namal.planningLoan());
 
         Mahinda rohitha = context.getBean("rohithaHora",Rohitha.class);
         System.out.println(rohitha.steal());
+        System.out.println(rohitha.planningLoan());
+
         context.close();
 
-       /* Mahinda namal = new Namal();
-        System.out.println(namal.steal());
-        Mahinda rohitha = new Rohitha();
-        System.out.println(rohitha.steal());*/
+
     }
 }
 // XML==>, Annotation, Class
