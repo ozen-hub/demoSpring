@@ -3,7 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="namalHora" class="com.bootcamp.demo.Namal"></bean>
-    <bean id="rohithaHora" class="com.bootcamp.demo.Rohitha"></bean>
+    <bean id="imfService" class="com.bootcamp.demo.IMFServiceImpl"></bean>
+
+    <bean id="namalHora" class="com.bootcamp.demo.Namal">
+        <constructor-arg ref="imfService"/>
+    </bean>
+
+    <bean id="rohithaHora" class="com.bootcamp.demo.Rohitha">
+        <constructor-arg ref="imfService"/>
+    </bean>
 
 </beans>
